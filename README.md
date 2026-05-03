@@ -8,7 +8,9 @@ Inspired by [ThePrimagen's git-worktree.vim](https://github.com/ThePrimeagen/git
 ## Installation
 
 ```lua
-vim.pack.add({ src = "https://github.com/laoz40/git-worktree.nvim" })
+vim.pack.add({
+	{ src = "https://github.com/laoz40/git-worktree.nvim" },
+})
 
 require("git-worktree").setup({ auto_install = true })
 ```
