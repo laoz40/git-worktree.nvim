@@ -177,6 +177,7 @@ function M.switch()
 	end
 
 	Snacks.picker.pick({
+		source = "git_worktrees",
 		title = "Git Worktrees",
 		format = "text",
 		items = get_worktree_items(),

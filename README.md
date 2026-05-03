@@ -12,7 +12,9 @@ vim.pack.add({
 	{ src = "https://github.com/laoz40/git-worktree.nvim" },
 })
 
-require("git-worktree").setup({ auto_install = true })
+require("git-worktree").setup({
+	auto_install = true,
+})
 ```
 
 ## Setup
@@ -28,6 +30,20 @@ Supported lockfiles:
 - `pnpm-lock.yaml` → `pnpm install`
 - `yarn.lock` → `yarn install`
 - `bun.lock` / `bun.lockb` → `bun install`
+
+## Snacks picker source
+
+The worktree picker uses the source name `git_worktrees`, so you can configure its layout like:
+
+```lua
+require("snacks").setup({
+	picker = {
+		sources = {
+			git_worktrees = { layout = "vscode" },
+		},
+	},
+})
+```
 
 ## Usage
 
