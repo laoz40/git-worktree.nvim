@@ -2,6 +2,7 @@ local M = {}
 
 local config = {
 	auto_install = true,
+	auto_switch = true,
 }
 
 function M.setup(opts)
@@ -228,7 +229,9 @@ function M.create()
 				local new_worktree = create_worktree(path, branch, upstream)
 
 				if new_worktree then
-					switch_worktree(new_worktree)
+					if config.auto_switch then
+						switch_worktree(new_worktree)
+					end
 
 					if config.auto_install then
 						run_install(new_worktree)

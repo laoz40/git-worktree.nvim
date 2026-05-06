@@ -14,6 +14,7 @@ vim.pack.add({
 
 require("git-worktree").setup({
 	auto_install = true,
+	auto_switch = true,
 })
 ```
 
@@ -23,6 +24,7 @@ require("git-worktree").setup({
 | Option | Default | Description |
 | --- | --- | --- |
 | `auto_install` | `true` | Automatically run package install after creating a worktree when a lockfile is found. |
+| `auto_switch` | `true` | Automatically switch to the newly created worktree after creation. |
 
 Supported lockfiles:
 
